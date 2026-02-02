@@ -8,11 +8,14 @@
   "main": "index.js",
   "scripts": {
     "start": "npx nodemon src/index"
-  },
+  }, 
   "dependencies": {
     "body-parser": "^2.2.2",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
-    "nodemon": "^3.1.11"
+    "mysql2": "^3.16.2",
+    "nodemon": "^3.1.11",
+    "sequelize": "^6.37.7",
+    "sequelize-cli": "^6.6.5"
   }
 }
