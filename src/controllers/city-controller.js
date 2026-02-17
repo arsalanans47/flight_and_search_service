@@ -1,10 +1,10 @@
-const {Cityservice} = require('../services/index');
+const {CityService} = require('../services/index');
 
 /* 
   * POST
   * data -> req.body  
 */
-const cityservice = new Cityservice();
+const cityservice = new CityService();
 
 
 // POST -> /city -> req.body
