@@ -25,7 +25,7 @@ class CityRepository {
       console.log("Something went wrong in the repository layer");
       throw {error};
     }
-  }
+  } 
 
   async updateCity(cityId, data) {
     try {
@@ -59,6 +59,16 @@ class CityRepository {
       console.log("Something went wrong in the repository layer");
       throw {error};
       
+    }
+  }
+
+  async getAllCities() {
+    try {
+      const cities = await City.findAll();
+      return cities;
+    } catch (error) {
+      console.log("Something went wrong in the repository layer");
+      throw {error};
     }
   }
 
