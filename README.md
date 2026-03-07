@@ -43,3 +43,4 @@ and then execute
     ```
     npx sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer
     ```
+
