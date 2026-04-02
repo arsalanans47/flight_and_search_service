@@ -1,4 +1,4 @@
-const {Flights} = require('../models/index');
+const { Flights } = require('../models/index');
 const { Op } = require('sequelize');
 class FlightRepository {
 
@@ -77,7 +77,21 @@ class FlightRepository {
     }
   }
 
-
+  async updateFlights(flightId, data){
+    try {
+        console.log("Repository: Attempting to update flight with ID:", flightId, "Data:", data);
+        await Flights.update(data, {
+          where: {
+            id: flightId
+          }
+        });
+        return true;
+      } catch (error) {
+        console.log("ERROR in repository layer:", error.message || error);
+        console.log("Full error:", error);
+        throw {error};
+      }
+  }
 }
 
 
